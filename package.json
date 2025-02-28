@@ -1,0 +1,29 @@
+{
+    "name": "youtube-downloader",
+    "version": "1.0.0",
+    "description": "A desktop YouTube downloader built with Electron and React",
+    "main": "main.js",
+    "scripts": {
+        "start": "concurrently \"npm:serve\" \"npm:electron\"",
+        "serve": "parcel src/index.html --port 3000",
+        "electron": "wait-on http://localhost:3000 && electron ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^7.6.0",
+        "electron": "^25.0.0",
+        "parcel": "^2.9.3",
+        "process": "^0.11.10",
+        "wait-on": "^7.0.1"
+    },
+    "dependencies": {
+        "ffmpeg-static": "^4.4.1",
+        "fluent-ffmpeg": "^2.1.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "youtube-dl-exec": "^3.0.16",
+        "ytdl-core": "^4.11.0"
+    }
+}
